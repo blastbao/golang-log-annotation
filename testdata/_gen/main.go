@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"logannotation/testdata/log"
+	"github.com/blastbao/golang-log-annotation/testdata/log"
 )
 
 func main() {

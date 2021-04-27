@@ -17,6 +17,7 @@ func newHandler() *handler {
 }
 
 func (h *handler) Handle(info *Info) (modified bool, err error) {
+
 	// log 注解只用于函数
 	funcDecl, ok := info.Node.(*ast.FuncDecl)
 	if !ok {
@@ -129,7 +130,6 @@ func getFieldListNames(fieldList *ast.FieldList) []string {
 	if fieldList == nil {
 		return nil
 	}
-
 	// 先设置默认的名称，确保每个字段都有名字，方便等下打日志使用
 	SetDefaultNames(fieldList.List...)
 	return GetFieldNames(fieldList.List...)
